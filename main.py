@@ -3,8 +3,8 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 FEATURES = ["home_pf", "home_pa", "away_pf", "away_pa"]
-SEASONS  = list(range(2018, 2027))   # range, not two endpoints
 CURRENT  = 2026
+SEASONS  = list(range(2018, CURRENT + 1))   # derived, so it can't drift
 K        = 4        # games before this season outweighs last
 EVALUATE = True     # False once you trust it, to train on everything
 
